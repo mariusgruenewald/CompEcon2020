@@ -4,4 +4,6 @@ plugins:
 relative_links:
   enabled: true
   collections: true
+  include:
+   - "Lecture 06: Constrained optimization: theory and methods"
   
