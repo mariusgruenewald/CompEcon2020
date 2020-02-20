@@ -56,9 +56,9 @@ I am working on a second edition. As we progress, I will (hopefully) have drafts
 
 | &nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;Topic&nbsp;&nbsp;&nbsp;&nbsp; | Details |
 |------|-----|-------|
-| Feb. 18 | [Introduction](Lecture_01_Introduction/README.md) | Chapter 1: Computational power. Computational math as an economics problem: managing scarce resources. Economics VERSUS computational mathematics. |
-| Feb. 20 | [Computer arithmetic](Lecture_02_Computer_arithmetic/README.md) | Chapter 2. General ideas of computational errors, and rates of convergence. Finite precision arithmetic and finite - difference derivatives. |
-| Feb. 25 |  [Linear algebra and equations](Lecture_03_Linear_algebra_and_equations/README.md) | Chapter 3. LU, QR, and Cholesky decomposition, condition numbers, Gauss-Jacobi and Gauss-Seidel methods. |
+| Feb. 18 | [Introduction](Lecture_01_Introduction) | Chapter 1: Computational power. Computational math as an economics problem: managing scarce resources. Economics VERSUS computational mathematics. |
+| Feb. 20 | [Computer arithmetic](Lecture_02_Computer_arithmetic) | Chapter 2. General ideas of computational errors, and rates of convergence. Finite precision arithmetic and finite - difference derivatives. |
+| Feb. 25 |  [Linear algebra and equations](Lecture_03_Linear_algebra_and_equations) | Chapter 3. LU, QR, and Cholesky decomposition, condition numbers, Gauss-Jacobi and Gauss-Seidel methods. |
 | Feb. 27 | [Unconstrained optimization](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture%2004:%20Unconstrained%20optimization) | Chapters 4 and 5. Search methods, bisection, gradient descent, Newton’s method, derivative free optimization (DFO). Applications to consumer demand and life-cycle problems, and maximum likelihood estimation. |
 | March 3 | [Nonlinear equations](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture%2005:%20Nonlinear%20equations) | Chapters 4 and 5. Bisection, Newton’s method, BFGS and DFP updates, and Powell hybrid. Applications to general equilibrium and Nash equilibrium. |
 | March 5 | [Constrained optimization: theory and methods](Lecture_06_Constrained_optimization_theory_and_methods/README.md) | Chapters 4 and 5. Linear and nonlinear optimization. KKT conditions, augmented lagrangian, SQP and interior point methods. |
