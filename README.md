@@ -61,7 +61,7 @@ I am working on a second edition. As we progress, I will (hopefully) have drafts
 | Feb. 25 |  [Linear algebra and equations](Lecture_03_Linear_algebra_and_equations) | Chapter 3. LU, QR, and Cholesky decomposition, condition numbers, Gauss-Jacobi and Gauss-Seidel methods. |
 | Feb. 27 | [Unconstrained optimization](Lecture_04_Unconstrained_optimization) | Chapters 4 and 5. Search methods, bisection, gradient descent, Newton’s method, derivative free optimization (DFO). Applications to consumer demand and life-cycle problems, and maximum likelihood estimation. |
 | March 3 | [Nonlinear equations](Lecture_05_Nonlinear_equations) | Chapters 4 and 5. Bisection, Newton’s method, BFGS and DFP updates, and Powell hybrid. Applications to general equilibrium and Nash equilibrium. |
-| March 5 | [Constrained optimization: theory and methods](Lecture_06_Constrained_optimization_theory_and_methods) | Chapters 4 and 5. Linear and nonlinear optimization. KKT conditions, augmented lagrangian, SQP and interior point methods. |
+| March 5 | [Constrained optimization: theory and methods](Lecture_06_Constrained_optimization_theory_and_methods/README.md) | Chapters 4 and 5. Linear and nonlinear optimization. KKT conditions, augmented lagrangian, SQP and interior point methods. |
 | March 10 | [Constrained optimization: applications](Lecture_07_Constrained_optimization_applications) | Introduction to multiobjective optimization. Applications to consumer demand and incentive problems |
 | March 12 | [Structural estimation I](Lecture_08_Structural_estimation_I) | Basic ideas. MPEC versus NFXP |
 | March 17 | [Finite-difference ODEs](Lecture_09_Finite-difference_ODEs) | |
