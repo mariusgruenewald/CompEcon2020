@@ -54,7 +54,7 @@ I am working on a second edition. As we progress, I will (hopefully) have drafts
 
 ## Course Outline and Schedule ##
 
-| &nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;Topic&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;Video&nbsp;&nbsp | Details |
+| &nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;Topic&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;Video&nbsp;&nbsp; | Details |
 |------|-----|---|-------|
 | Feb. 18 | [Introduction](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_01_Introduction) | [Video](Lecture_01_Introduction/video.md) | Chapter 1: Computational power. Computational math as an economics problem: managing scarce resources. Economics VERSUS computational mathematics. |
 | Feb. 20 | [Computer arithmetic](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_02_Computer_arithmetic) | | Chapter 2. General ideas of computational errors, and rates of convergence. Finite precision arithmetic and finite - difference derivatives. |
