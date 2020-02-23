@@ -54,37 +54,37 @@ I am working on a second edition. As we progress, I will (hopefully) have drafts
 
 ## Course Outline and Schedule ##
 
-| &nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;Topic&nbsp;&nbsp;&nbsp;&nbsp; | Details |
-|------|-----|-------|
-| Feb. 18 | [Introduction](Lecture_01_Introduction/README.md) | Chapter 1: Computational power. Computational math as an economics problem: managing scarce resources. Economics VERSUS computational mathematics. |
-| Feb. 20 | [Computer arithmetic](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_02_Computer_arithmetic) | Chapter 2. General ideas of computational errors, and rates of convergence. Finite precision arithmetic and finite - difference derivatives. |
-| Feb. 25 |  [Linear algebra and equations](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_03_Linear_algebra_and_equations) | Chapter 3. LU, QR, and Cholesky decomposition, condition numbers, Gauss-Jacobi and Gauss-Seidel methods. |
-| Feb. 27 | [Unconstrained optimization](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_04_Unconstrained_optimization) | Chapters 4 and 5. Search methods, bisection, gradient descent, Newton’s method, derivative free optimization (DFO). Applications to consumer demand and life-cycle problems, and maximum likelihood estimation. |
-| March 3 | [Nonlinear equations](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_05_Nonlinear_equations) | Chapters 4 and 5. Bisection, Newton’s method, BFGS and DFP updates, and Powell hybrid. Applications to general equilibrium and Nash equilibrium. |
-| March 5 | [Constrained optimization: theory and methods](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_06_Constrained_optimization_theory_and_methods/README.md) | Chapters 4 and 5. Linear and nonlinear optimization. KKT conditions, augmented lagrangian, SQP and interior point methods. |
-| March 10 | [Constrained optimization: applications](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_07_Constrained_optimization_applications) | Introduction to multiobjective optimization. Applications to consumer demand and incentive problems |
-| March 12 | [Structural estimation I](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_08_Structural_estimation_I) | Basic ideas. MPEC versus NFXP |
+| &nbsp;&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;Topic&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;Video&nbsp;&nbsp; | Details |
+|------|-----|---|-------|
+| Feb. 18 | [Introduction](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_01_Introduction) | [Video](Lecture_01_Introduction/video.md) | Chapter 1: Computational power. Computational math as an economics problem: managing scarce resources. Economics VERSUS computational mathematics. |
+| Feb. 20 | [Computer arithmetic](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_02_Computer_arithmetic) |[Video](Lecture_02_Computer_arithmetic/video.md) | Chapter 2. General ideas of computational errors, and rates of convergence. Finite precision arithmetic and finite - difference derivatives. |
+| Feb. 25 |  [Linear algebra and equations](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_03_Linear_algebra_and_equations) | | Chapter 3. LU, QR, and Cholesky decomposition, condition numbers, Gauss-Jacobi and Gauss-Seidel methods. |
+| Feb. 27 | [Unconstrained optimization](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_04_Unconstrained_optimization) | | Chapters 4 and 5. Search methods, bisection, gradient descent, Newton’s method, derivative free optimization (DFO). Applications to consumer demand and life-cycle problems, and maximum likelihood estimation. |
+| March 3 | [Nonlinear equations](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_05_Nonlinear_equations) | | Chapters 4 and 5. Bisection, Newton’s method, BFGS and DFP updates, and Powell hybrid. Applications to general equilibrium and Nash equilibrium. |
+| March 5 | [Constrained optimization: theory and methods](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_06_Constrained_optimization_theory_and_methods/README.md) | | Chapters 4 and 5. Linear and nonlinear optimization. KKT conditions, augmented lagrangian, SQP and interior point methods. |
+| March 10 | [Constrained optimization: applications](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_07_Constrained_optimization_applications) | | Introduction to multiobjective optimization. Applications to consumer demand and incentive problems |
+| March 12 | [Structural estimation I](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_08_Structural_estimation_I) | | Basic ideas. MPEC versus NFXP |
 | March 17 | [Finite-difference ODEs](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_09_Finite-difference_ODEs) | |
-| March 19 | [Version control using Git](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_10_Version_control_using_Git) | *(Robert Erbe and Gregor Reich)* |
-| March 24 | [Automatic Differentiation](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_11_Automatic_Differentiation) | *(Philipp Mueller)* |
-| March 26 | [Homotopy](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_12_Homotopy) | *(Philipp Mueller and Karl Schmedders)* Chapter 5. Applications will include general equilibrium, Nash equilibrium of static game. |
-| March 30 | [Numerical quadrature, MC, qMC](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_13_Numerical_quadrature_MC_qMC) | Chapter 7, 8, and 9. Integration methods for single- and multiple-dimensional integrals. Monte Carlo simulation methods. Applications to portfolio choice and dynamic problems. |
-| April 2 | [Approximation I](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_14_Approximation_I) | Chapter 6. Interpolation, regression, orthogonal polynomials, splines, least squares, LAD and Lasso fits. |
-| April 7 | [Dynamic optimization, equilibrium, NLCEQ](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_15_Dynamic_optimization_equilibrium_NLCEQ) | |
-| April 9, 14, and 16 | No lectures. Easter break. | |
-| April 21 | [Dynamic programming - discrete state](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_16_Dynamic_programming-discrete_state) | Chapter 12. Value function iteration, policy iteration, acceleration methods. |
-| April 23 | [Structural estimation II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_17_Structural_estimation_II) | Su-Judd and Skrainka-Judd papers. |
-| April 28 | [Dynamic programming - continuous state](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_18_Dynamic_programming-continuous_state) | Chapter 12. Solutions to deterministic and stochastic dynamic programming problems using approximation, integration, and optimization methods. Applications to savings-consumption problems, climate change policy, and portfolio problems.|
-| April 30 | [Projection methods I](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_19_Projection_methods_I) | Chapter 10, 11, and 17. Methods for solving ordinary differential equations as well as the more complex equations arising in dynamic economic models. |
-| May 5 | [Projection methods II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_20_Projection_methods_II) | Chapter 10, 11, and 17. Methods for solving ordinary differential equations as well as the more complex equations arising in dynamic economic models. |
-| May 7 | [Approximation II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_21_Approximation_II) | Neural nets, radial basis functions, machine learning |
-| May 11 - May 30 | “Office hours” | **Ken Judd will be in Zurich. He will be happy to chat with students during this time.** |
-| May 12 | [Perturbation methods](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_22_Perturbation_methods) | Chapter 13, 14, and 15. Taylor series approximations to find numerical solutions of equations, linearizing around a steady state, simple bifurcation methods. |
-| May 14 | [DSGE, NK models](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_23_DSGE_NK_models) | |
-| May 19 | [Structural estimation III](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_24_Structural_estimation_III) | *(Philipp Mueller and Gregor Reich)* |
-| May 20 | [Dynamic games](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_25_Dynamic_games) | *(Note that this is a Wednesday. Ascension Day on May 21 is a holiday in Zurich.)* Markov perfect equilibria of dynamic games. |
-| May 26 | [Polynomials](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_26_Polynomials) | Solving systems of polynomials. Homotopy methods and Groebner bases. |
-| May 28 | [Concluding remarks](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_27_Concluding_remarks) | Future of computational economics |
+| March 19 | [Version control using Git](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_10_Version_control_using_Git) | | *(Robert Erbe and Gregor Reich)* |
+| March 24 | [Automatic Differentiation](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_11_Automatic_Differentiation) || *(Philipp Mueller)* |
+| March 26 | [Homotopy](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_12_Homotopy) | | *(Philipp Mueller and Karl Schmedders)* Chapter 5. Applications will include general equilibrium, Nash equilibrium of static game. |
+| March 30 | [Numerical quadrature, MC, qMC](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_13_Numerical_quadrature_MC_qMC) | | Chapter 7, 8, and 9. Integration methods for single- and multiple-dimensional integrals. Monte Carlo simulation methods. Applications to portfolio choice and dynamic problems. |
+| April 2 | [Approximation I](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_14_Approximation_I) | | Chapter 6. Interpolation, regression, orthogonal polynomials, splines, least squares, LAD and Lasso fits. |
+| April 7 | [Dynamic optimization, equilibrium, NLCEQ](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_15_Dynamic_optimization_equilibrium_NLCEQ) | | |
+| April 9, 14, and 16 | No lectures. Easter break. | | |
+| April 21 | [Dynamic programming - discrete state](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_16_Dynamic_programming-discrete_state) | | Chapter 12. Value function iteration, policy iteration, acceleration methods. |
+| April 23 | [Structural estimation II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_17_Structural_estimation_II) | | Su-Judd and Skrainka-Judd papers. |
+| April 28 | [Dynamic programming - continuous state](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_18_Dynamic_programming-continuous_state) | | Chapter 12. Solutions to deterministic and stochastic dynamic programming problems using approximation, integration, and optimization methods. Applications to savings-consumption problems, climate change policy, and portfolio problems.|
+| April 30 | [Projection methods I](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_19_Projection_methods_I) | | Chapter 10, 11, and 17. Methods for solving ordinary differential equations as well as the more complex equations arising in dynamic economic models. |
+| May 5 | [Projection methods II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_20_Projection_methods_II) | | Chapter 10, 11, and 17. Methods for solving ordinary differential equations as well as the more complex equations arising in dynamic economic models. |
+| May 7 | [Approximation II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_21_Approximation_II) | | Neural nets, radial basis functions, machine learning |
+| May 11 - May 30 | “Office hours” | | **Ken Judd will be in Zurich. He will be happy to chat with students during this time.** |
+| May 12 | [Perturbation methods](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_22_Perturbation_methods) | | Chapter 13, 14, and 15. Taylor series approximations to find numerical solutions of equations, linearizing around a steady state, simple bifurcation methods. |
+| May 14 | [DSGE, NK models](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_23_DSGE_NK_models) | | |
+| May 19 | [Structural estimation III](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_24_Structural_estimation_III) | | *(Philipp Mueller and Gregor Reich)* |
+| May 20 | [Dynamic games](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_25_Dynamic_games) | | *(Note that this is a Wednesday. Ascension Day on May 21 is a holiday in Zurich.)* Markov perfect equilibria of dynamic games. |
+| May 26 | [Polynomials](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_26_Polynomials) | | Solving systems of polynomials. Homotopy methods and Groebner bases. |
+| May 28 | [Concluding remarks](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_27_Concluding_remarks) | | Future of computational economics |
 
 
 ## Contact ##
