@@ -6,9 +6,9 @@
 
 Hilbert matrix arises naturally in physics
 
-* [Hilbert matrix](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)
+* [Hilbert matrix](https://en.wikipedia.org/wiki/Vandermonde_matrix)
 
 Vandermonde matrices arise naturally in regression
 
-* [Vandermonde matrix](https://www.youtube.com/playlist?list=PL3940DD956CDF0622)
+* [Vandermonde matrix](https://en.wikipedia.org/wiki/Vandermonde_matrix)
 
