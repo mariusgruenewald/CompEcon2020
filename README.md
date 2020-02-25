@@ -104,18 +104,6 @@ The final grade will be a weighted average of these three assignments, with the 
 
 I will give you two weeks to complete an assignment. You may work in pairs, and I will allow one team of three if the number of students taking this course for a grade is odd.
 
- #### Brownie points
- 
-For all participants of the course: I will occasionally post a programming project that I think would be of general interest. If students want to work on the project, I will help guide their efforts. If successful, I will want to post the resulting code and documentation on my website, giving appropriate acknowledgement to those who worked on it. This is part of my effort to create a repository of high quality numerical code. I can’t do this by myself and will appreciate help.
-
-If someone has an idea for such a project, then let’s talk about it.
-
-Those who successfully complete such a project will earn "brownie points". This offer will continue even after the course is over.
-
-What are those brownie points good for? Well, occasionally I have workshops out here at Hoover, like [nICE2019](https://sites.google.com/site/kenjuddnice2019/) and [nICE2018](https://sites.google.com/site/nice2018copy/). I sometimes am able to help students who would like to visit Stanford. In all these matters, I have a natural bias towards inviting students who have proven to me that they have computational skills and want to apply them in their economics research.
-
-One more point: If you are taking this for a grade and you do such a project and earn lots of brownie points, this work can be a partial substitute for the Assignments.
-
 ## Contact ##
 
 If you have any questions, feel free to contact Ken or open a new issue on Github (check if your question has maybe already been asked and answered).
