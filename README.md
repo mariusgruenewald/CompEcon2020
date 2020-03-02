@@ -51,6 +51,10 @@ The text is *Numerical Methods in Economics* by Judd, published by MIT Press. I 
 
 I am working on a second edition. As we progress, I will (hopefully) have drafts on the course website of chapters for the second edition.
 
+## Exercises ##
+
+The exercises and sample solutions can be found in the corresponding lecture folders. For the python code, we offer binder support such that the code can easily be viewed and executed online. To make use of this feature, please press the button [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KennethJudd/CompEcon2020/master).
+
 
 ## Course Outline and Schedule ##
 
@@ -58,8 +62,8 @@ I am working on a second edition. As we progress, I will (hopefully) have drafts
 |------|-----|---|-------|
 | Feb. 18 | [Introduction](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_01_Introduction) | [Video](Lecture_01_Introduction/video.md) | Chapter 1: Computational power. Computational math as an economics problem: managing scarce resources. Economics VERSUS computational mathematics. |
 | Feb. 20 | [Computer arithmetic](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_02_Computer_arithmetic) |[Video](Lecture_02_Computer_arithmetic/video.md) | Chapter 2. General ideas of computational errors, and rates of convergence. Finite precision arithmetic and finite - difference derivatives. |
-| Feb. 25 |  [Linear algebra and equations](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_03_Linear_algebra_and_equations) | | Chapter 3. LU, QR, and Cholesky decomposition, condition numbers, Gauss-Jacobi and Gauss-Seidel methods. |
-| Feb. 27 | [Unconstrained optimization](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_04_Unconstrained_optimization) | | Chapters 4 and 5. Search methods, bisection, gradient descent, Newton’s method, derivative free optimization (DFO). Applications to consumer demand and life-cycle problems, and maximum likelihood estimation. |
+| Feb. 25 |  [Linear algebra and equations](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_03_Linear_algebra_and_equations) |  | Chapter 3. LU, QR, and Cholesky decomposition, condition numbers, Gauss-Jacobi and Gauss-Seidel methods. |
+| Feb. 27 | [Unconstrained optimization](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_04_Unconstrained_optimization) | [Video](Lecture_04_Unconstrained_optimization/video.md)  | Chapters 4 and 5. Search methods, bisection, gradient descent, Newton’s method, derivative free optimization (DFO). Applications to consumer demand and life-cycle problems, and maximum likelihood estimation. |
 | March 3 | [Nonlinear equations](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_05_Nonlinear_equations) | | Chapters 4 and 5. Bisection, Newton’s method, BFGS and DFP updates, and Powell hybrid. Applications to general equilibrium and Nash equilibrium. |
 | March 5 | [Constrained optimization: theory and methods](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_06_Constrained_optimization_theory_and_methods/README.md) | | Chapters 4 and 5. Linear and nonlinear optimization. KKT conditions, augmented lagrangian, SQP and interior point methods. |
 | March 10 | [Constrained optimization: applications](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_07_Constrained_optimization_applications) | | Introduction to multiobjective optimization. Applications to consumer demand and incentive problems |
