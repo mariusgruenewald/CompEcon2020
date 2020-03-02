@@ -86,6 +86,23 @@ I am working on a second edition. As we progress, I will (hopefully) have drafts
 | May 26 | [Polynomials](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_26_Polynomials) | | Solving systems of polynomials. Homotopy methods and Groebner bases. |
 | May 28 | [Concluding remarks](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_27_Concluding_remarks) | | Future of computational economics |
 
+## Assignments and Grades ##
+
+This is for those taking this course for a grade: There will be three required assignments. They will all involve writing computer code to solve some economic problem. I may ask you to code up a few basic algorithms, but otherwise I strongly encourage the use of professionally written packages. You are welcome to use any serious software. 
+
+**Assignment 1 will cover Lectures 1-7. I should have the assignment to you before Lecture 7.**
+
+**Assignment 2 will cover Lectures 8-18 and should be circulated before Lecture 18.**
+
+**Assignment 3 will cover Lectures 1-25 and circulated before lecture 25.**
+
+The final grade will be a weighted average of these three assignments, with the weights reflecting my attitude that what you know when the course ends is the most important consideration.
+
+* Assignment 1: 25%
+* Assignment 2: 25%
+* Assignment 3: 50%
+
+I will give you two weeks to complete an assignment. You may work in pairs, and I will allow one team of three if the number of students taking this course for a grade is odd.
 
 ## Contact ##
 
