@@ -53,7 +53,7 @@ I am working on a second edition. As we progress, I will (hopefully) have drafts
 
 ## Exercises ##
 
-The exercises and sample solutions can be found in the corresponding lecture folders. For the python code, we offer binder support such that the code can easily be viewed and executed online. To make use of this feature, please press the button [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KennethJudd/CompEcon2020/master).
+The exercises and sample solutions can be found in the corresponding lecture folders. For the python code, we offer binder support such that the code can easily be viewed and executed online. To make use of this feature, please press the button [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/KennethJudd/CompEcon2020/master?filepath=_index.ipynb).
 
 
 ## Course Outline and Schedule ##
