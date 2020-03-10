@@ -1,0 +1,594 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     21466,        586]
+NotebookOptionsPosition[     17251,        503]
+NotebookOutlinePosition[     17763,        523]
+CellTagsIndexPosition[     17720,        520]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Solving Equations", "Title",
+ CellChangeTimes->{{3.5116192481302557`*^9, 
+  3.511619253567912*^9}},ExpressionUUID->"8dc590e1-5eb6-4d48-ba4d-\
+1c4c8207faa7"],
+
+Cell[TextData[{
+ "Suppose ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", ":", 
+     SuperscriptBox["R", "n"]}], "\[Rule]", 
+    SuperscriptBox["R", "n"]}], TraditionalForm]],ExpressionUUID->
+  "1bd058f1-2d21-4219-99f8-5b25b9bc73ca"],
+ ". Consider the equation\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"4636963e-b693-4b0e-b51e-6ce36d6c0025"]
+}], "Text",
+ CellChangeTimes->{{3.5116192593278017`*^9, 3.511619360650322*^9}, {
+  3.5116498130376673`*^9, 
+  3.5116498310988092`*^9}},ExpressionUUID->"69d1055e-4364-4ffe-8117-\
+8835ffce9ea1"],
+
+Cell[CellGroupData[{
+
+Cell["Typical algorithms", "Section",
+ CellChangeTimes->{{3.511619387116232*^9, 
+  3.511619390503356*^9}},ExpressionUUID->"750f92e2-3cb3-479a-9dd6-\
+9a5b37818d43"],
+
+Cell["\<\
+Newtons\[CloseCurlyQuote] method:
+\tfast, but 
+\tcan diverge
+\tmay try to evaluate f(x) where it does not exist\
+\>", "Text",
+ CellChangeTimes->{{3.511619398919133*^9, 3.5116194581519527`*^9}, {
+   3.511619536356327*^9, 3.51161957870642*^9}, 
+   3.511649885291669*^9},ExpressionUUID->"cb4b42c5-bb59-4cb2-9f24-\
+7102b69a2697"],
+
+Cell["\<\
+Homotopy method:
+\treliable, but
+\tslow\
+\>", "Text",
+ CellChangeTimes->{{3.511619398919133*^9, 3.511619483888607*^9}, {
+   3.511619587722434*^9, 3.511619589026203*^9}, 
+   3.511649889035536*^9},ExpressionUUID->"899a6314-d35f-4962-a65e-\
+bd59b8ea0aae"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"189d0df5-0fc6-43ee-86f6-936232bfd44d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Alternative: Reformulate as an optimization problem", "Section",
+ CellChangeTimes->{{3.511619623331869*^9, 
+  3.511619636745915*^9}},ExpressionUUID->"ffe794e1-c266-4417-9885-\
+eacc02f92a08"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", "x"], TraditionalForm]],ExpressionUUID->
+  "b8b86a6d-1fcf-420f-ad66-281fa89d9ea0"],
+ " \t1 \ns.t.  \t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"422617d7-1ea2-4ae7-b225-b48ae187796a"]
+}], "Text",
+ CellChangeTimes->{{3.511619651427629*^9, 3.5116197052127323`*^9}, {
+  3.511620657005414*^9, 3.511620657704692*^9}, {3.51162162826328*^9, 
+  3.511621631823578*^9}, {3.760541221132964*^9, 
+  3.760541228972465*^9}},ExpressionUUID->"4be963df-39ca-4e4a-b2ff-\
+aafcccc83906"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"54228613-fc4d-4576-b630-63058a2f70ca"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Advantages", "Section",
+ CellChangeTimes->{{3.5116197262125177`*^9, 
+  3.511619727756325*^9}},ExpressionUUID->"bcec3008-8994-4d7a-ab0e-\
+404f923f55fe"],
+
+Cell[CellGroupData[{
+
+Cell["Variety of solvers", "Subsection",
+ CellChangeTimes->{{3.5116197325185547`*^9, 
+  3.511619738980447*^9}},ExpressionUUID->"882c6f5c-e07e-4a22-8676-\
+b8280af2d7f7"],
+
+Cell["Can use KNITRO, CONOPT, Filter, SNOPT, NPSOL, etc", "Text",
+ CellChangeTimes->{{3.5116197415484324`*^9, 
+  3.5116197612527437`*^9}},ExpressionUUID->"a80762f4-2ee1-4ad0-b2cc-\
+310b00a196f6"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"8c4a3cbd-7931-454d-98e2-eba92aa4f6b8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Can impose constraints", "Subsection",
+ CellChangeTimes->{{3.5116197709347343`*^9, 
+  3.5116197755891867`*^9}},ExpressionUUID->"aab8a88d-28a4-4677-a6e3-\
+2b5eeb9ebad9"],
+
+Cell[CellGroupData[{
+
+Cell["Impose domain conditions", "Subsubsection",
+ CellChangeTimes->{{3.5116199625664797`*^9, 
+  3.5116199834139347`*^9}},ExpressionUUID->"b46adcd0-2b74-4361-ac1a-\
+d39dd3ab1dc1"],
+
+Cell[TextData[{
+ "Suppose f(x) is not defined for x<= 0. Then solve\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", "x"], TraditionalForm]],ExpressionUUID->
+  "51ad2649-d1fc-472d-b8c4-550796a6c741"],
+ " \t1\ns.t. \t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"eb6a070c-f9a1-413b-8663-4007f74b52f9"],
+ "\n\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", " ", "\[GreaterEqual]", "  ", "\[Epsilon]", " "}], 
+   TraditionalForm]],ExpressionUUID->"54ff59a6-fdc9-41df-a7f4-d73d87da4ece"],
+ "\n\t\nfor some small \[Epsilon] > 0. Can\[CloseCurlyQuote]t use x=>0 \
+because then solver may consider some ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "i"], "=", "0."}], TraditionalForm]],ExpressionUUID->
+  "f35c9afc-1a32-44d7-9c79-09e1d2bd34c6"]
+}], "Text",
+ CellChangeTimes->{{3.5116197793012466`*^9, 3.511619902364278*^9}, {
+   3.511620641313612*^9, 3.511620641929574*^9}, {3.511621643345661*^9, 
+   3.511621682703224*^9}, 3.760541148718308*^9, {3.760541236195602*^9, 
+   3.7605412401644382`*^9}},ExpressionUUID->"8f1a345a-2c26-4a5b-9b0f-\
+86b092ec6f7f"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"e25c1cc5-2748-4d9b-9fea-10fade24a31f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Use auxiliary information about solution", "Subsubsection",
+ CellChangeTimes->{{3.5116199625664797`*^9, 
+  3.51162001868445*^9}},ExpressionUUID->"ecb9eafe-d3b1-4757-bc55-\
+efc99fd9b2cb"],
+
+Cell[TextData[{
+ "Suppose you know that the solution to f(x)=0 satisfies a < x < b (a and b \
+are vectors). We can use that information in\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", "x"], TraditionalForm]],ExpressionUUID->
+  "c54a0e69-bfb6-45ef-8b35-8d95ff689f90"],
+ " \t1\ns.t. \t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "=", " ", "0"}], TraditionalForm]],
+  ExpressionUUID->"2549b44b-f118-48b6-b389-70206b5c10e2"],
+ "\n\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+   "a", " ", "\[LessEqual]", "  ", "x", " ", "\[LessEqual]", "  ", "b"}], 
+   TraditionalForm]],ExpressionUUID->"5c09c23c-d006-47e2-922d-9ef32a66ce2a"],
+ "\n\t"
+}], "Text",
+ CellChangeTimes->{{3.5116197793012466`*^9, 3.511619902364278*^9}, {
+   3.511620021830467*^9, 3.51162011745789*^9}, {3.511620629551857*^9, 
+   3.511620630517819*^9}, {3.511621470917739*^9, 3.511621484998315*^9}, 
+   3.760541150358074*^9, {3.760541244716096*^9, 
+   3.76054124663585*^9}},ExpressionUUID->"8781c49c-3ab7-4309-ac91-\
+476d958a1431"],
+
+Cell[TextData[{
+ "More generally, if we know that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", " ", "\[LessEqual]", "  ", 
+    RowBox[{"g", "(", "x", ")"}], " ", "\[LessEqual]", "  ", "b"}], 
+   TraditionalForm]],ExpressionUUID->"a2b01ba4-55d8-4a86-95f7-4cd5684cb96c"],
+ ", for some a, b, and g, then solve\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", "x"], TraditionalForm]],ExpressionUUID->
+  "c57cef1e-131b-4581-8534-75d19b219b85"],
+ " \t1\ns.t. \t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], " ", "=", " ", "0"}], TraditionalForm]],
+  ExpressionUUID->"a2efedf6-ccc6-4e97-89a6-4fa1d7681cbe"],
+ "\n\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", " ", "\[LessEqual]", "  ", 
+    RowBox[{"g", "(", "x", ")"}], " ", "\[LessEqual]", "  ", "b"}], 
+   TraditionalForm]],ExpressionUUID->"d425cad8-1ad0-4455-baa3-dd0d55f9dac3"],
+ "\n\t"
+}], "Text",
+ CellChangeTimes->{{3.5116197793012466`*^9, 3.511619902364278*^9}, {
+  3.511620021830467*^9, 3.51162011745789*^9}, {3.5116201541836033`*^9, 
+  3.511620188031048*^9}, {3.511620625118128*^9, 3.511620625767803*^9}, {
+  3.511621422898978*^9, 3.511621459388143*^9}, {3.511621522229785*^9, 
+  3.511621536493491*^9}, {3.760541152022167*^9, 
+  3.760541181180559*^9}},ExpressionUUID->"2a835db0-8868-4640-a316-\
+9864162fdda7"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"0e92e4d7-20ea-4210-b659-b4004834b9c3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Stabilize algorithm with ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["L", "2"], TraditionalForm]],ExpressionUUID->
+  "f82ea358-85b8-46b9-a2f1-64c38b283f63"],
+ " penalty"
+}], "Subsubsection",
+ CellChangeTimes->{{3.5116199625664797`*^9, 3.51162001868445*^9}, {
+  3.511620219565406*^9, 3.511620224316576*^9}, {3.511620382991852*^9, 
+  3.511620392744112*^9}},ExpressionUUID->"a14e842b-7937-4aa3-84f1-\
+9d0354a06b21"],
+
+Cell[TextData[{
+ "Suppose that the Jacobian of f is nearly singular near the solution. Then, \
+the following quadratic penalty formulation stabilizes the algorithm:\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", "x"], TraditionalForm]],ExpressionUUID->
+  "a1236272-8874-49e5-b343-65827b152e3b"],
+ " \t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox[
+     RowBox[{
+     "\[LeftDoubleBracketingBar]", "x", "\[RightDoubleBracketingBar]"}], "2"],
+     "2"], TraditionalForm]],ExpressionUUID->
+  "cf6a46bf-4a91-4836-95d8-feb26d0aa453"],
+ "\ns.t. \t\tf(x) =0\n\nwhere P is some penalty parameter, preferably small.\t"
+}], "Text",
+ CellChangeTimes->{{3.5116197793012466`*^9, 3.511619902364278*^9}, {
+  3.511620021830467*^9, 3.51162011745789*^9}, {3.511620228069128*^9, 
+  3.511620355695529*^9}, {3.5116206143568363`*^9, 3.5116206197596283`*^9}, {
+  3.5116213975086*^9, 3.5116214153894167`*^9}, {3.760541143326105*^9, 
+  3.760541168061687*^9}},ExpressionUUID->"4ee0dfc7-5122-4186-b76d-\
+384bbaed8cb8"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"cb10beaf-6de7-444d-982e-f9fc6a181278"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Stabilize algorithm",
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["L", "1"], TraditionalForm]],ExpressionUUID->
+  "1cd14587-68d7-436f-8d31-bd308160b8d9"],
+ " penalty"
+}], "Subsubsection",
+ CellChangeTimes->{{3.5116199625664797`*^9, 3.51162001868445*^9}, {
+  3.511620219565406*^9, 3.511620224316576*^9}, {3.511620396896247*^9, 
+  3.5116204101693897`*^9}},ExpressionUUID->"fe9df583-80f5-42a2-adf7-\
+0c7db16bed11"],
+
+Cell[TextData[{
+ "An ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["L", "1"], TraditionalForm]],ExpressionUUID->
+  "2c8741fb-b94d-4b04-91f1-5d5e80fc7e30"],
+ " penalty might also help\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", "x"], TraditionalForm]],ExpressionUUID->
+  "1ed09cd3-545d-42e3-900c-f62f45b100d6"],
+ " \t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{
+    "\[LeftDoubleBracketingBar]", "x", "\[RightDoubleBracketingBar]"}], "1"], 
+   TraditionalForm]],ExpressionUUID->"273aa98a-9732-495b-9e77-60536452b3ad"],
+ "\ns.t. \t\tf(x) =0\n\nwhere P is some penalty parameter, preferably small.\t\
+(More later about how to do this.)"
+}], "Text",
+ CellChangeTimes->{{3.5116197793012466`*^9, 3.511619902364278*^9}, {
+   3.511620021830467*^9, 3.51162011745789*^9}, {3.511620228069128*^9, 
+   3.511620355695529*^9}, {3.511620416265979*^9, 3.511620428753422*^9}, {
+   3.5116204754600143`*^9, 3.5116205040341578`*^9}, {3.51162060839355*^9, 
+   3.511620611384953*^9}, {3.511621322671623*^9, 3.511621322671769*^9}, {
+   3.511621382053339*^9, 3.51162139212084*^9}, 3.7605411392624903`*^9, 
+   3.76054117184473*^9},ExpressionUUID->"b11a62dd-b513-4bd1-b3fa-\
+c7a630248aed"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"863b8c2a-b487-4d8d-a570-0745ac7675c2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Stabilize via relaxation", "Subsubsection",
+ CellChangeTimes->{{3.5116199625664797`*^9, 3.51162001868445*^9}, {
+  3.511620219565406*^9, 3.511620224316576*^9}, {3.511620396896247*^9, 
+  3.5116204101693897`*^9}, {3.511620456313655*^9, 
+  3.511620462716758*^9}},ExpressionUUID->"8325e251-5fe6-4631-8527-\
+97ba4102d552"],
+
+Cell[TextData[{
+ "We can instead try to find something that nearly solves the equations:\n\n\
+",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", 
+    RowBox[{"x", ",", " ", "\[Lambda]"}]], TraditionalForm]],ExpressionUUID->
+  "f59385dc-5c24-4e7c-acb3-afb024520901"],
+ " \t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{
+    "\[LeftDoubleBracketingBar]", "\[Lambda]", 
+     "\[RightDoubleBracketingBar]"}], "1"], TraditionalForm]],ExpressionUUID->
+  "847aa52b-139b-4974-ab96-678985bba830"],
+ "\ns.t. \t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", 
+     SubscriptBox["\[Lambda]", "i"]}], " ", "\[LessEqual]", " ", 
+    RowBox[{"f", "(", "x", ")"}], " ", "\[LessEqual]", " ", 
+    SubscriptBox["\[Lambda]", "i"]}], TraditionalForm]],ExpressionUUID->
+  "02e7c5bf-3d3d-4bf4-89d0-12a7bbd2c68f"],
+ "\n\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Lambda]", "i"], " ", "\[GreaterEqual]", "  ", "0"}], 
+   TraditionalForm]],ExpressionUUID->"3c2b5d0a-1b97-4836-8577-925487382e4f"],
+ "\n\nThis will give you something instead of just saying \
+\[OpenCurlyDoubleQuote]Can\[CloseCurlyQuote]t find a solution\
+\[CloseCurlyDoubleQuote]"
+}], "Text",
+ CellChangeTimes->{{3.5116197793012466`*^9, 3.511619902364278*^9}, {
+  3.511620021830467*^9, 3.51162011745789*^9}, {3.511620228069128*^9, 
+  3.511620355695529*^9}, {3.511620416265979*^9, 3.511620428753422*^9}, {
+  3.511620514171967*^9, 3.5116205990098667`*^9}, {3.511620680102501*^9, 
+  3.511620698238624*^9}, {3.511621282545546*^9, 3.5116213116455793`*^9}, {
+  3.511621356261649*^9, 3.5116213728430433`*^9}, {3.760541037767064*^9, 
+  3.760541040139893*^9}, {3.760541085551488*^9, 3.760541086607644*^9}, {
+  3.760541191764409*^9, 
+  3.760541197348316*^9}},ExpressionUUID->"2f89a786-368b-478d-8839-\
+4ce48d752355"],
+
+Cell[TextData[{
+ "You could use the max norm\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", 
+    RowBox[{"x", ",", " ", "\[Lambda]"}]], TraditionalForm]],ExpressionUUID->
+  "7899453b-cac0-4284-bf85-4f35765f5e15"],
+ " \t",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    RowBox[{
+    "\[LeftDoubleBracketingBar]", "\[Lambda]", 
+     "\[RightDoubleBracketingBar]"}], "\[Infinity]"], TraditionalForm]],
+  ExpressionUUID->"e9aa25bc-9962-4bba-a904-a143fc679222"],
+ "\ns.t. \t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", 
+     SubscriptBox["\[Lambda]", "i"]}], " ", "\[LessEqual]", " ", 
+    RowBox[{"f", "(", "x", ")"}], " ", "\[LessEqual]", " ", 
+    SubscriptBox["\[Lambda]", "i"]}], TraditionalForm]],ExpressionUUID->
+  "c90d5675-5568-4249-b4f8-0f89ab5f1895"],
+ "\n\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Lambda]", "i"], " ", "\[GreaterEqual]", "  ", "0"}], 
+   TraditionalForm]],ExpressionUUID->"66f70835-2f29-4b60-a353-d8c0dc4fb97e"]
+}], "Text",
+ CellChangeTimes->{{3.5116197793012466`*^9, 3.511619902364278*^9}, {
+  3.511620021830467*^9, 3.51162011745789*^9}, {3.511620228069128*^9, 
+  3.511620355695529*^9}, {3.511620416265979*^9, 3.511620428753422*^9}, {
+  3.511620514171967*^9, 3.5116205990098667`*^9}, {3.511620680102501*^9, 
+  3.511620698238624*^9}, {3.511621282545546*^9, 3.5116213116455793`*^9}, {
+  3.511621356261649*^9, 3.5116213728430433`*^9}, {3.76054100414684*^9, 
+  3.7605410937594843`*^9}, {3.76054120272407*^9, 
+  3.760541204220413*^9}},ExpressionUUID->"5b191f57-0c45-427b-88b9-\
+a711a97aa118"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True,ExpressionUUID->"dbd31308-c234-4ea9-ad30-b39601f01597"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find multiple solutions", "Subsubsection",
+ CellChangeTimes->{{3.511620712952551*^9, 
+  3.511620717647019*^9}},ExpressionUUID->"69b52f6c-3b53-4d10-89fb-\
+2a5390df0a57"],
+
+Cell[TextData[{
+ "If there are many solutions, one could resolve the following problem \
+several times for different \[Pi] parameters:\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", "x"], TraditionalForm]],ExpressionUUID->
+  "273d63d9-e92a-4baa-9a6a-1c050084793c"],
+ " \t\[Pi] . x\ns.t.  \t\tf(x) = 0\n\nThis will go after solutions on the \
+boundary of the set of solutions. "
+}], "Text",
+ CellChangeTimes->{{3.511620724397367*^9, 3.511620835447332*^9}, 
+   3.760541104511194*^9, 
+   3.7605412069968853`*^9},ExpressionUUID->"d47dbf07-a09c-4119-8467-\
+5fd259f6a443"],
+
+Cell[TextData[{
+ "The following will go after the solution closest to some chosen ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]],ExpressionUUID->
+  "44abbba6-08e3-44af-9e75-c48a2cc4268f"],
+ ":\n\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Min", "x"], TraditionalForm]],ExpressionUUID->
+  "938568fc-97c3-4cba-86e0-f80667ce2a04"],
+ " \t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox[
+     RowBox[{"\[LeftDoubleBracketingBar]", 
+      RowBox[{
+       SubscriptBox["x", "0"], " ", "-", " ", "x"}], 
+      "\[RightDoubleBracketingBar]"}], "2"], "2"], TraditionalForm]],
+  ExpressionUUID->"a2dde302-4828-46d6-8b39-3a41592163a9"],
+ "\ns.t.  \t\tf(x) = 0"
+}], "Text",
+ CellChangeTimes->{{3.511620724397367*^9, 3.511620886121132*^9}, {
+   3.511621173038137*^9, 3.511621250152529*^9}, 3.5116295975164022`*^9, {
+   3.760541106374971*^9, 3.7605411125671167`*^9}, 
+   3.760541210068843*^9},ExpressionUUID->"b4114ba8-9434-4e84-b3f0-\
+2dc5765983c0"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1600, 1086},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 162, 3, 146, "Title",ExpressionUUID->"8dc590e1-5eb6-4d48-ba4d-1c4c8207faa7"],
+Cell[744, 27, 630, 19, 119, "Text",ExpressionUUID->"69d1055e-4364-4ffe-8117-8835ffce9ea1"],
+Cell[CellGroupData[{
+Cell[1399, 50, 163, 3, 101, "Section",ExpressionUUID->"750f92e2-3cb3-479a-9dd6-9a5b37818d43"],
+Cell[1565, 55, 335, 9, 157, "Text",ExpressionUUID->"cb4b42c5-bb59-4cb2-9f24-7102b69a2697"],
+Cell[1903, 66, 262, 8, 122, "Text",ExpressionUUID->"899a6314-d35f-4962-a65e-bd59b8ea0aae"],
+Cell[2168, 76, 99, 1, 6, "PageBreak",ExpressionUUID->"189d0df5-0fc6-43ee-86f6-936232bfd44d",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2304, 82, 196, 3, 101, "Section",ExpressionUUID->"ffe794e1-c266-4417-9885-eacc02f92a08"],
+Cell[2503, 87, 614, 16, 90, "Text",ExpressionUUID->"4be963df-39ca-4e4a-b2ff-aafcccc83906"],
+Cell[3120, 105, 99, 1, 6, "PageBreak",ExpressionUUID->"54228613-fc4d-4576-b630-63058a2f70ca",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3256, 111, 157, 3, 101, "Section",ExpressionUUID->"bcec3008-8994-4d7a-ab0e-404f923f55fe"],
+Cell[CellGroupData[{
+Cell[3438, 118, 168, 3, 81, "Subsection",ExpressionUUID->"882c6f5c-e07e-4a22-8676-b8280af2d7f7"],
+Cell[3609, 123, 195, 3, 53, "Text",ExpressionUUID->"a80762f4-2ee1-4ad0-b2cc-310b00a196f6"],
+Cell[3807, 128, 99, 1, 6, "PageBreak",ExpressionUUID->"8c4a3cbd-7931-454d-98e2-eba92aa4f6b8",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3943, 134, 174, 3, 81, "Subsection",ExpressionUUID->"aab8a88d-28a4-4677-a6e3-2b5eeb9ebad9"],
+Cell[CellGroupData[{
+Cell[4142, 141, 179, 3, 67, "Subsubsection",ExpressionUUID->"b46adcd0-2b74-4361-ac1a-d39dd3ab1dc1"],
+Cell[4324, 146, 1152, 29, 264, "Text",ExpressionUUID->"8f1a345a-2c26-4a5b-9b0f-86b092ec6f7f"],
+Cell[5479, 177, 99, 1, 6, "PageBreak",ExpressionUUID->"e25c1cc5-2748-4d9b-9fea-10fade24a31f",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5615, 183, 192, 3, 67, "Subsubsection",ExpressionUUID->"ecb9eafe-d3b1-4757-bc55-efc99fd9b2cb"],
+Cell[5810, 188, 1036, 26, 229, "Text",ExpressionUUID->"8781c49c-3ab7-4309-ac91-476d958a1431"],
+Cell[6849, 216, 1302, 32, 230, "Text",ExpressionUUID->"2a835db0-8868-4640-a316-9864162fdda7"],
+Cell[8154, 250, 99, 1, 6, "PageBreak",ExpressionUUID->"0e92e4d7-20ea-4210-b659-b4004834b9c3",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8290, 256, 431, 11, 68, "Subsubsection",ExpressionUUID->"a14e842b-7937-4aa3-84f1-9d0354a06b21"],
+Cell[8724, 269, 1018, 23, 227, "Text",ExpressionUUID->"4ee0dfc7-5122-4186-b76d-384bbaed8cb8"],
+Cell[9745, 294, 99, 1, 6, "PageBreak",ExpressionUUID->"cb10beaf-6de7-444d-982e-f9fc6a181278",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9881, 300, 438, 12, 68, "Subsubsection",ExpressionUUID->"fe9df583-80f5-42a2-adf7-0c7db16bed11"],
+Cell[10322, 314, 1186, 28, 228, "Text",ExpressionUUID->"b11a62dd-b513-4bd1-b3fa-c7a630248aed"],
+Cell[11511, 344, 99, 1, 6, "PageBreak",ExpressionUUID->"863b8c2a-b487-4d8d-a570-0745ac7675c2",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11647, 350, 322, 5, 67, "Subsubsection",ExpressionUUID->"8325e251-5fe6-4631-8527-97ba4102d552"],
+Cell[11972, 357, 1792, 44, 264, "Text",ExpressionUUID->"2f89a786-368b-478d-8839-4ce48d752355"],
+Cell[13767, 403, 1557, 39, 195, "Text",ExpressionUUID->"5b191f57-0c45-427b-88b9-a711a97aa118"],
+Cell[15327, 444, 99, 1, 6, "PageBreak",ExpressionUUID->"dbd31308-c234-4ea9-ad30-b39601f01597",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15463, 450, 174, 3, 67, "Subsubsection",ExpressionUUID->"69b52f6c-3b53-4d10-89fb-2a5390df0a57"],
+Cell[15640, 455, 574, 13, 227, "Text",ExpressionUUID->"d47dbf07-a09c-4119-8467-5fd259f6a443"],
+Cell[16217, 470, 982, 27, 159, "Text",ExpressionUUID->"b4114ba8-9434-4e84-b3f0-2dc5765983c0"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
