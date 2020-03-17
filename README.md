@@ -102,7 +102,7 @@ This is for those taking this course for a grade: There will be three required a
 
 The final grade will be a weighted average of these three assignments, with the weights reflecting my attitude that what you know when the course ends is the most important consideration.
 
-* [Assignment 1 (A+B)](Assignments/assignment_1): 30%
+* [Assignment 1 (A+B)](https://github.com/KennethJudd/CompEcon2020/tree/master/Assignments/assignment_1): 30%
 * Assignment 2 (A+B): 30%
 * Assignment 3: 40%
 
