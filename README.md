@@ -83,7 +83,7 @@ The exercises and sample solutions can be found in the corresponding lecture fol
 | April 30 | [Projection methods I](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_19_Projection_methods_I) | | Chapter 10, 11, and 17. Methods for solving ordinary differential equations as well as the more complex equations arising in dynamic economic models. |
 | May 5 | [Projection methods II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_20_Projection_methods_II) | | Chapter 10, 11, and 17. Methods for solving ordinary differential equations as well as the more complex equations arising in dynamic economic models. |
 | May 7 | [Approximation II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_21_Approximation_II) | | Neural nets, radial basis functions, machine learning |
-| May 11 - May 30 | “Office hours” | | **Ken Judd will be in Zurich. He will be happy to chat with students during this time.** |
+| May 11 - May 30 | “Office hours” | | **Ken Judd offers office hours. Please contact him directly by e-mail.** |
 | May 12 | [Perturbation methods](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_22_Perturbation_methods) | | Chapter 13, 14, and 15. Taylor series approximations to find numerical solutions of equations, linearizing around a steady state, simple bifurcation methods. |
 | May 14 | [DSGE, NK models](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_23_DSGE_NK_models) | | |
 | May 19 | [Structural estimation III](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_24_Structural_estimation_III) | | *(Philipp Mueller and Gregor Reich)* |
