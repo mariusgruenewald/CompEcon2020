@@ -21,7 +21,7 @@ RUN pip3 install numpy \
  && pip3 install matplotlib\
  && pip3 install plotly==4.7.1\
  && pip3 install "notebook>=5.3" "ipywidgets==7.5"\
- && pip3 install jupyterlab "ipywidgets=7.5"\
+ && pip3 install jupyterlab "ipywidgets==7.5"\
  && pip3 install pandas\
  && chown -R ${NB_UID} ${HOME}
  
