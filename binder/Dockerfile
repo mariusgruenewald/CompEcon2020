@@ -10,6 +10,8 @@ RUN apt-get -y install --no-install-recommends nodejs\
 	&& apt-get -y install --no-install-recommends npm\
 	&& apt-get -y install --no-install-recommends python3
 
+RUN apt-get -y install --no-install-recommends python3-pip 
+
 
 COPY . ${HOME}/
 RUN pip3 install numpy \
