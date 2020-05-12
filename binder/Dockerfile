@@ -14,6 +14,10 @@ RUN apt-get -y install --no-install-recommends python3-pip
 
 
 COPY . ${HOME}/
+
+
+RUN chown -R root ${HOME}
+
 RUN pip3 install numpy \
  && pip3 install casadi\
  && pip3 install scipy\
@@ -29,7 +33,6 @@ RUN jupyter labextension install jupyterlab-plotly@4.7.1
 
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager plotlywidget@4.7.1
 
-RUN chown -R ${NB_USER} ${HOME}
 
 WORKDIR ${HOME}
 CMD ["jupyter", "lab"]
