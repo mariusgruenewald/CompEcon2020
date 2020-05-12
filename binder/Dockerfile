@@ -6,8 +6,9 @@ RUN apt-get update
 # && apt-get -y install --no-install-recommends gnupg git vim less \
 # && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get -y install nodejs\
-	&& apt-get -y install npm
+RUN apt-get -y install -no-install-recommends nodejs\
+	&& apt-get -y install -no-install-recommends npm\
+	&& apt-get -y install -no-install-recommends python3
 
 
 COPY . ${HOME}/
