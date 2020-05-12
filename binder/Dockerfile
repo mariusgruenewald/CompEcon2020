@@ -32,7 +32,7 @@ RUN pip3 install numpy \
  && pip3 install tensorflow\
  && pip3 install plotly==4.7.1\
  && pip3 install "notebook>=5.3" "ipywidgets==7.5"\
- && pip3 install jupyterlab "ipywidgets==7.5"\
+ && pip3 install jupyterlab "ipywidgets==7.5"
  
  
 RUN jupyter labextension install jupyterlab-plotly@4.7.1
