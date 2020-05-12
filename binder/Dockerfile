@@ -1,4 +1,4 @@
-FROM jupyter/minimal-notebook:latest
+FROM ubuntu:latest
 
 USER root
 
