@@ -23,11 +23,13 @@ RUN pip3 install numpy \
  && pip3 install "notebook>=5.3" "ipywidgets==7.5"\
  && pip3 install jupyterlab "ipywidgets==7.5"\
  && pip3 install pandas\
- && chown -R ${NB_UID} ${HOME}
+
  
 RUN jupyter labextension install jupyterlab-plotly@4.7.1
 
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager plotlywidget@4.7.1
+
+RUN chown -R ${NB_USER} ${HOME}
 
 USER ${NB_USER}
 WORKDIR ${HOME}
