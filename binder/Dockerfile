@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM jupyter/tensorflow-notebook
 
 USER root
 
@@ -7,16 +7,13 @@ RUN apt-get update
 # && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get -y install --no-install-recommends nodejs\
-	&& apt-get -y install --no-install-recommends npm\
-	&& apt-get -y install --no-install-recommends python3
+	&& apt-get -y install --no-install-recommends npm
 
-RUN apt-get -y install --no-install-recommends python3-pip 
-
+#RUN apt-get install python-setuptools
 
 COPY . ${HOME}/
 
 
-RUN chown -R root ${HOME}
 
 #RUN pip3 install numpy \
 # && pip3 install casadi\
@@ -28,12 +25,14 @@ RUN chown -R root ${HOME}
 # && pip3 install jupyterlab "ipywidgets==7.5"\
 # && pip3 install pandas
 
-RUN pip3 install numpy \
- && pip3 install tensorflow\
- && pip3 install plotly==4.7.1\
- && pip3 install "notebook>=5.3" "ipywidgets==7.5"\
- && pip3 install jupyterlab "ipywidgets==7.5"
+RUN pip install numpy \
+ && pip install plotly==4.7.1\
+ && pip install "notebook>=5.3" "ipywidgets==7.5"\
+ && pip install jupyterlab "ipywidgets==7.5"
+
+RUN chown -R ${NB_USER} ${HOME}
  
+USER ${NB_USER}
  
 RUN jupyter labextension install jupyterlab-plotly@4.7.1
 
