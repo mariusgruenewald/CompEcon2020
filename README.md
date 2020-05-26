@@ -85,8 +85,8 @@ The exercises and sample solutions can be found in the corresponding lecture fol
 | May 7 | [Perturbation methods](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_21_Perturbation_methods) | | Chapter 13, 14, and 15. Taylor series approximations to find numerical solutions of equations, linearizing around a steady state, simple bifurcation methods. |
 | May 12 | [Approximation II](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_22_Approximation_II) | [Video](https://stanford.zoom.us/rec/play/usIsIbqqrGg3GoWXswSDA6J5W9XseP-s23JLqPtYyk-0AnUFNVSiMrcXN7ctj5N3mBvDVHolwyqEvZqe?startTime=1589296129000&_x_zm_rtaid=vk-DMl74QcuOfOTtxVo9HA.1589456998615.0553ce3954bc4eaf4588d4724022529e&_x_zm_rhtaid=802) | Neural nets, radial basis functions, machine learning |
 | May 14 | [Dynamic games](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_23_Dynamic_Games) | | |
-| May 19 | [Multiobjective optimization](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_24_Multi_Objective_Optimization) | | *(Philipp Mueller and Gregor Reich)* |
-| May 20 | [Structural estimation III](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_25_Structural_estimation_III) | | *(Note that this is a Wednesday. Ascension Day on May 21 is a holiday in Zurich.)* Philipp Mueller and Gregor Reich. |
+| May 19 | [Multiobjective optimization](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_24_Multi_Objective_Optimization) | | |
+| May 20 | [Structural estimation III](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_25_Structural_estimation_III) | [Video](https://vimeo.com/420386906/14608d6476) | *(Note that this is a Wednesday. Ascension Day on May 21 is a holiday in Zurich.)* Philipp Mueller and Gregor Reich. |
 | May 26 | [DSICE: High-Power Computing Applied to Climate Policy Issues](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_26_DSICE) | |  |
 | May 28 | [Concluding remarks](https://github.com/KennethJudd/CompEcon2020/tree/master/Lecture_27_Concluding_remarks) | | Future of computational economics |
 
